@@ -1,0 +1,51 @@
+---
+title: "Cookbook"
+author: "Kannimangalam ashok"
+date: "06/04/2020"
+output: html_document
+---
+
+Getting and Cleaning Data Course Project
+
+There are nine measurement files .Three files
+total_acc,body_acc,and body_gyro each measuring x,y and z axis and two files for subject ID and activity labels.
+
+The measurement, id and activity code files are for train and test sets,totalling 22 files.
+
+
+The measurement files were downloaded into  files
+tac,bac and bgy each ending with x,y,and z for test and train.
+The subject id and activities were downloaded into sub and y files for test and train.
+
+The test and train files of each are merged resulting into 11 files.
+
+Finally all files are merged into full_file.
+
+The measurements stored as a single character file with each measurement seperated by spaces.In order to calculate mean and std dev the measurements have to be split and converted to numbers.
+
+During the process, where additional spaces are present NA's have been coerced. The NAs were removed by unlisting the files. The files were subsequently relisted using split function.
+
+for each measurement file, mean and standard deviations are calculated and stored as data frames in files
+(m/sd)***(x/y/z)_df where *** is tac/bac/bgy totalling 18 files.
+
+These files are combined together with the subject ID and activity label files.
+
+The numerical reference to activity is changed to natural factors such as WALKING etc.
+
+The final data frame is converted to a text file named "tidy_data.txt".
+
+The R sript file run_analysis.R is used to arrive at the tidy data.
+
+The tidy_data consists of  20 columns.
+1. subject ID
+2. activity
+3 - 5 mean- body-acc-x/y/z
+6 - 8 mean-total-acc-x/y/z
+9 - 11 mean - gyro x/y/z
+12 - 14 sd- body-acc-x/y/z
+15 - 17 sd-total-acc-x/y/z
+18 - 20 sd - gyro x/y/z
+
+The units of mean and sd for body and total cols are gravity units and for gyro cols are radians per second.
+
+=================================================================

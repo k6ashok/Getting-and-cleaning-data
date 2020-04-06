@@ -1,0 +1,32 @@
+---
+title: "README"
+author: "Kannimangalam ashok"
+date: "06/04/2020"
+output: html_document
+---
+
+#Getting and Cleaning Data Course Project#
+
+The input files for the project are downloaded from 
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+The files have to be dowloaded in the working directory before the script is run.
+
+The scrpit is in run_analysis.R
+
+The out put tidy data set is tidy_data.txt
+
+===========================================================
+
+The output consists of the following files
+
+1. README.Rmd - this file 
+
+
+2. Cookbook.Rmd  -  explians how the script and output is structured
+
+
+3. run_analysis.R - the scipt used
+
+============================================================
